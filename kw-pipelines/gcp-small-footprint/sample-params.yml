@@ -97,7 +97,7 @@ apps_domain: xxxx
 #     smoke_tests
 #     test-autoscaling
 ert_errands_to_disable: none
-ert_errands_to_change: all
+# ert_errands_to_change: all
 
 # PCF Elastic Runtime minor version to track
 ert_major_minor_version: ^2\.1\.[0-9]+$ # ERT minor version to track (e.g ^2\.0\.[0-9]+$ will track 2.0.x versions)

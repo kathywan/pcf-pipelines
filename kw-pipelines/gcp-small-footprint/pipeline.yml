@@ -401,17 +401,6 @@ jobs:
       OPSMAN_CLIENT_ID: ""
       OPSMAN_CLIENT_SECRET: ""
 
-  - task: update-errands
-    file: pcf-pipelines/tasks/when-changed-errands/task.yml
-    params:
-      PRODUCT_NAME: cf
-      OPSMAN_DOMAIN_OR_IP_ADDRESS: {{opsman_domain_or_ip_address}}
-      OPSMAN_USERNAME: {{opsman_admin_username}}
-      OPSMAN_PASSWORD: {{opsman_admin_password}}
-      ERRANDS_TO_CHANGE: {{ert_errands_to_change}}
-      OPSMAN_CLIENT_ID: ""
-      OPSMAN_CLIENT_SECRET: ""
-
   - task: deploy-ert
     file: pcf-pipelines/tasks/apply-changes/task.yml
     params:
