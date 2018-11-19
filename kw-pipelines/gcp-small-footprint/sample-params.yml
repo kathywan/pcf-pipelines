@@ -106,7 +106,10 @@ ert_major_minor_version: ^2\.1\.[0-9]+$ # ERT minor version to track (e.g ^2\.0\
 frontend_idle_timeout: 601
 
 # Optional - if your git repo requires an SSH key.
-git_private_key:
+git_private_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  xxxx
+  -----END RSA PRIVATE KEY-----
 
 # Required if haproxy_forward_tls is enabled - HAProxy will use the CA provided to verify the certificates provided by the router.
 haproxy_backend_ca:
