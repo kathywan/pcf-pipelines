@@ -19,7 +19,7 @@ resources:
     uri: git@github.com:kathywan/pcf-pipelines.git
     branch: master
     private_key: {{git_private_key}}
-    tag_filter: {{git_tag_filter}}
+    # tag_filter: {{git_tag_filter}}
 
 - name: terraform-state
   type: gcs
