@@ -19,6 +19,7 @@ resources:
     uri: git@github.com:kathywan/pcf-pipelines.git
     branch: master
     private_key: {{git_private_key}}
+    tag_filter: {{git_tag_filter}}
 
 - name: terraform-state
   type: gcs
@@ -309,6 +310,7 @@ jobs:
   - task: configure-srt
     file: pcf-pipelines/tasks/conf-srt/task.yml
     params:
+    IAAS:
       S3_ENDPOINT:
       OPSMAN_CLIENT_ID: ""
       OPSMAN_CLIENT_SECRET: ""
@@ -328,7 +330,7 @@ jobs:
       DEFAULT_QUOTA_MEMORY_LIMIT_IN_MB: 102400
       DEFAULT_QUOTA_MAX_SERVICES_COUNT: 100
       ROUTER_REQUEST_TIMEOUT_IN_SEC: 900
-      MYSQL_MONITOR_EMAIL: azwickey@pivotal.io
+      MYSQL_MONITOR_EMAIL: {{mysql_monitor_recipient_email}}
       IAAS: gcp
       SSL_CERT: {{poe_ssl_cert1}}
       SSL_PRIVATE_KEY: {{poe_ssl_key1}}
