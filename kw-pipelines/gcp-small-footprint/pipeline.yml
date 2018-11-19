@@ -310,7 +310,6 @@ jobs:
   - task: configure-srt
     file: pcf-pipelines/tasks/conf-srt/task.yml
     params:
-    IAAS:
       S3_ENDPOINT:
       OPSMAN_CLIENT_ID: ""
       OPSMAN_CLIENT_SECRET: ""

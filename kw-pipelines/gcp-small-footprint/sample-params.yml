@@ -110,6 +110,7 @@ git_private_key: |
   -----BEGIN RSA PRIVATE KEY-----
   xxxx
   -----END RSA PRIVATE KEY-----
+git_tag_filter: vxxxx
 
 # Required if haproxy_forward_tls is enabled - HAProxy will use the CA provided to verify the certificates provided by the router.
 haproxy_backend_ca:
